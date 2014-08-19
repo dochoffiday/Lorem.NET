@@ -1,0 +1,5 @@
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Debug\Lorem.NET.dll
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Debug\Lorem.NET.pdb
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Debug\Lorem.NET.csprojResolveAssemblyReference.cache
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Debug\Lorem.NET.dll
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Debug\Lorem.NET.pdb
