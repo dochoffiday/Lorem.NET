@@ -34,8 +34,11 @@ string[] paragraphs = Lorem.NET.Lorem.Paragraphs(8, 9, 4, 5, 1, 3);
 // this will generate a random valid email address:
 string email = Lorem.NET.Lorem.Email();
 
-// this will generate a random DateTime object:
+// this will generate a random DateTime object between 1/1/1950 and the current DateTime:
 DateTime dateTime = Lorem.NET.Lorem.DateTime();
+
+// this will generate a random DateTime object between 1/1/1995 and 12/31/2020:
+DateTime dateTime = Lorem.NET.Lorem.DateTime(new DateTime(1995, 1, 1), new DateTime(2020, 12, 31))
 
 // this will return "true" 55% of the time:
 bool isTruth = Lorem.NET.Lorem.Chance(55, 100);
