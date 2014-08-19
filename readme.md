@@ -9,5 +9,6 @@ Usage
 ### Text Helpers
 
 ```csharp
-Lorem.Words(2, 5);
+// will generate a string with two to five words:
+string temp = Lorem.Words(2, 5);
 ```
