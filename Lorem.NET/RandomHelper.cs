@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace Lorem.NET
+namespace LoremNET
 {
     /*
      * http://stackoverflow.com/a/1785821/234132

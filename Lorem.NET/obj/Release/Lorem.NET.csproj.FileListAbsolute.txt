@@ -1,0 +1,4 @@
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Release\LoremNET.dll
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Release\LoremNET.pdb
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Release\LoremNET.dll
+C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Release\LoremNET.pdb

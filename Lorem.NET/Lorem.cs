@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Lorem.NET
+namespace LoremNET
 {
     public class Lorem
     {

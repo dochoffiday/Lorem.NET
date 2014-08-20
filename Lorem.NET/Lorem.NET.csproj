@@ -7,8 +7,8 @@
     <ProjectGuid>{787D3BA7-DB6C-4704-B89C-8D91A4392442}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Lorem.NET</RootNamespace>
-    <AssemblyName>Lorem.NET</AssemblyName>
+    <RootNamespace>LoremNET</RootNamespace>
+    <AssemblyName>LoremNET</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

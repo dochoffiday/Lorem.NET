@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Lorem.NET
+namespace LoremNET
 {
     internal static class Extensions
     {
