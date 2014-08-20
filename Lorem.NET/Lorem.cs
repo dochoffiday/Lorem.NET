@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LoremNET
 {
-    public class Lorem
+    public partial class Lorem
     {
         public static bool Chance(int successes, int attempts)
         {
