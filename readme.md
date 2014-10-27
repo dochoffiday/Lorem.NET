@@ -34,6 +34,9 @@ string[] paragraphs = LoremNET.Lorem.Paragraphs(8, 9, 4, 5, 1, 3);
 // this will generate a random valid email address:
 string email = LoremNET.Lorem.Email();
 
+// this will generate a random hex number (i.e. a color)
+string hex = LoremNET.Lorem.HexNumber();
+
 // this will generate a random DateTime object between 1/1/1950 and the current DateTime:
 DateTime dateTime = LoremNET.Lorem.DateTime();
 

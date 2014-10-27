@@ -126,5 +126,24 @@ namespace LoremNET
         }
 
         #endregion
+
+        #region Color
+
+        /* http://stackoverflow.com/a/1054087/234132 */
+        public static string HexNumber(int digits)
+        {
+            byte[] buffer = new byte[digits / 2];
+            RandomHelper.Instance.NextBytes(buffer);
+            string result = String.Concat(buffer.Select(x => x.ToString("X2")).ToArray());
+
+            if (digits % 2 == 0)
+            {
+                return result;
+            }
+
+            return result + RandomHelper.Instance.Next(16).ToString("X");
+        }
+
+        #endregion
     }
 }
