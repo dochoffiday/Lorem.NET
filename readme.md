@@ -49,6 +49,10 @@ bool isTruth = LoremNET.Lorem.Chance(55, 100);
 // this will randomly select an item from the group:
 string[] numbers = GetNumbers();
 string number = LoremNET.Lorem.Random(numbers);
+
+// this will randomly select a value from the enum:
+MyEnum value = LoremNET.Lorem.RandomEnum<MyEnum>(); 
+
 ```
 
 ### RandomHelper
