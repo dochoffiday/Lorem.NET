@@ -2,3 +2,8 @@ C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Release\LoremNET.dll
 C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\bin\Release\LoremNET.pdb
 C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Release\LoremNET.dll
 C:\AJ\Personal\GitHub\Lorem.NET\Lorem.NET\obj\Release\LoremNET.pdb
+D:\Repositories\Lorem.NET\Lorem.NET\obj\Release\Lorem.NET.csprojResolveAssemblyReference.cache
+D:\Repositories\Lorem.NET\Lorem.NET\obj\Release\LoremNET.dll
+D:\Repositories\Lorem.NET\Lorem.NET\obj\Release\LoremNET.pdb
+D:\Repositories\Lorem.NET\Lorem.NET\bin\Release\LoremNET.dll
+D:\Repositories\Lorem.NET\Lorem.NET\bin\Release\LoremNET.pdb
