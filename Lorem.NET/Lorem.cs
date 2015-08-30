@@ -20,14 +20,17 @@ namespace LoremNET
 			return items[index];
 		}
 
-		public static TEnum RandomEnum<TEnum>()
+        public static TEnum Enum<TEnum>() where TEnum : struct, IConvertible
 		{
-			if (typeof(TEnum).IsEnum)
-			{
-				var v = Enum.GetValues(typeof(TEnum));
-				return (TEnum)v.GetValue(LoremNET.RandomHelper.Instance.Next(v.Length));
-			}
-			else throw new ArgumentException("Generic type must be an enum.");
+            if (typeof(TEnum).IsEnum)
+            {
+                var v = System.Enum.GetValues(typeof(TEnum));
+                return (TEnum)v.GetValue(LoremNET.RandomHelper.Instance.Next(v.Length));
+            }
+            else
+            {
+                throw new ArgumentException("Generic type must be an enum.");
+            }
 		}
 
 		/* http://stackoverflow.com/a/6651661/234132 */

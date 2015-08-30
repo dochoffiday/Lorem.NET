@@ -8,6 +8,7 @@ namespace LoremNET
         {
             return s.Replace(pattern, "");
         }
+
         internal static String[] Split(this string s, string separator)
         {
             return s.Split(new[] { separator }, StringSplitOptions.None);

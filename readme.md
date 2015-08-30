@@ -51,7 +51,7 @@ string[] numbers = GetNumbers();
 string number = LoremNET.Lorem.Random(numbers);
 
 // this will randomly select a value from the enum:
-MyEnum value = LoremNET.Lorem.RandomEnum<MyEnum>(); 
+MyEnum value = LoremNET.Lorem.Enum<MyEnum>(); 
 
 ```
 
