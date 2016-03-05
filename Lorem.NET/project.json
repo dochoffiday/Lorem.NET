@@ -4,7 +4,7 @@
   "authors": [ "dochoffiday", "trichards57", "xfischer" ],
   "tags": [ "" ],
   "projectUrl": "https://github.com/trichards57/Lorem.NET",
-  "licenseUrl": "",
+  "licenseUrl": "https://opensource.org/licenses/MIT",
 
   "frameworks": {
     "net451": { },
