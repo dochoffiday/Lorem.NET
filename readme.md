@@ -1,7 +1,7 @@
-Lorem.NET
-===============
+Lorem.NET for .DNX
+==================
 
-A .NET library for all things random!
+A .NET library for all things random!  Updated to support DNX projects.
 
 Usage
 ---------------

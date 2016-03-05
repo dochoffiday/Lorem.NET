@@ -8,21 +8,19 @@ namespace LoremNET
      */
     public static class RandomHelper
     {
-        private static int seedCounter = new Random().Next();
+        private static int _seedCounter = new Random().Next();
 
         [ThreadStatic]
-        private static Random rng;
+        private static Random _rng;
 
         public static Random Instance
         {
             get
             {
-                if (rng == null)
-                {
-                    int seed = Interlocked.Increment(ref seedCounter);
-                    rng = new Random(seed);
-                }
-                return rng;
+                if (_rng != null) return _rng;
+                var seed = Interlocked.Increment(ref _seedCounter);
+                _rng = new Random(seed);
+                return _rng;
             }
         }
     }

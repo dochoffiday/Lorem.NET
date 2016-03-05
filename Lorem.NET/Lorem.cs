@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace LoremNET
 {
@@ -21,19 +22,16 @@ namespace LoremNET
 		}
 
         public static TEnum Enum<TEnum>() where TEnum : struct, IConvertible
-		{
-            if (typeof(TEnum).IsEnum)
+        {
+            if (typeof(TEnum).GetTypeInfo().IsEnum)
             {
                 var v = System.Enum.GetValues(typeof(TEnum));
-                return (TEnum)v.GetValue(LoremNET.RandomHelper.Instance.Next(v.Length));
+                return (TEnum)v.GetValue(RandomHelper.Instance.Next(v.Length));
             }
-            else
-            {
-                throw new ArgumentException("Generic type must be an enum.");
-            }
-		}
+            throw new ArgumentException("Generic type must be an enum.");
+        }
 
-		/* http://stackoverflow.com/a/6651661/234132 */
+	    /* http://stackoverflow.com/a/6651661/234132 */
 		public static long Number(long min, long max)
 		{
 			byte[] buf = new byte[8];
@@ -47,7 +45,7 @@ namespace LoremNET
 
 		public static DateTime DateTime(int startYear = 1950, int startMonth = 1, int startDay = 1)
 		{
-			return DateTime(new System.DateTime(startYear, startMonth, startDay), System.DateTime.Now);
+			return DateTime(new DateTime(startYear, startMonth, startDay), System.DateTime.Now);
 		}
 
 		public static DateTime DateTime(DateTime min)
@@ -70,7 +68,7 @@ namespace LoremNET
 
 		public static string Email()
 		{
-			return string.Format("{0}@{1}.com", Lorem.Words(1, false), Lorem.Words(1, false));
+			return string.Format("{0}@{1}.com", Words(1, false), Words(1, false));
 		}
 
 		public static string Words(int wordCount, bool uppercaseFirstLetter = true, bool includePunctuation = false)
@@ -115,7 +113,7 @@ namespace LoremNET
 			var source = string.Join(" ", Enumerable.Range(0, RandomHelper.Instance.Next(sentenceCountMin, sentenceCountMax)).Select(x => Sentence(wordCountMin, wordCountMax)));
 
 			//remove traililng space
-			return source.Remove(source.Length - 1);
+			return source.Trim();
 		}
 
 		public static IEnumerable<string> Paragraphs(int wordCount, int sentenceCount, int paragraphCount)
@@ -147,7 +145,7 @@ namespace LoremNET
 		{
 			byte[] buffer = new byte[digits / 2];
 			RandomHelper.Instance.NextBytes(buffer);
-			string result = String.Concat(buffer.Select(x => x.ToString("X2")).ToArray());
+			string result = string.Concat(buffer.Select(x => x.ToString("X2")).ToArray());
 
 			if (digits % 2 == 0)
 			{

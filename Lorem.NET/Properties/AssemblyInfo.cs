@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LoremNET")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Lorem.DNX.NET")]
+[assembly: AssemblyDescription("A .NET library for all things random!")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Lorem.NET")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyProduct("Lorem.DNX.NET")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +19,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8af259ae-efba-4e62-a4db-9830488a4085")]
+[assembly: Guid("1DD3BEF7-6EFE-4003-BB40-FD0083951C3C")]
 
 // Version information for an assembly consists of the following four values:
 //
