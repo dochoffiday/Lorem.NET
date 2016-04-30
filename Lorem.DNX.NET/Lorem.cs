@@ -5,21 +5,37 @@ using System.Reflection;
 
 namespace LoremNET
 {
-	public partial class Lorem
-	{
-		public static bool Chance(int successes, int attempts)
-		{
-			var number = Number(1, attempts);
+    public partial class Lorem
+    {
+        public static bool Chance(int successes, int attempts)
+        {
+            var number = Number(1, attempts);
 
-			return number <= successes;
-		}
+            return number <= successes;
+        }
 
-		public static T Random<T>(T[] items)
-		{
-			var index = RandomHelper.Instance.Next(items.Length);
+        public static DateTime DateTime(int startYear = 1950, int startMonth = 1, int startDay = 1)
+        {
+            return DateTime(new DateTime(startYear, startMonth, startDay), System.DateTime.Now);
+        }
 
-			return items[index];
-		}
+        public static DateTime DateTime(DateTime min)
+        {
+            return DateTime(min, System.DateTime.Now);
+        }
+
+        public static DateTime DateTime(DateTime min, DateTime max)
+        {
+            TimeSpan timeSpan = max - min;
+            TimeSpan newSpan = new TimeSpan(0, RandomHelper.Instance.Next(0, (int)timeSpan.TotalMinutes), 0);
+
+            return min + newSpan;
+        }
+
+        public static string Email()
+        {
+            return string.Format("{0}@{1}.com", Words(1, false), Words(1, false));
+        }
 
         public static TEnum Enum<TEnum>() where TEnum : struct, IConvertible
         {
@@ -31,130 +47,104 @@ namespace LoremNET
             throw new ArgumentException("Generic type must be an enum.");
         }
 
-	    /* http://stackoverflow.com/a/6651661/234132 */
-		public static long Number(long min, long max)
-		{
-			byte[] buf = new byte[8];
-			RandomHelper.Instance.NextBytes(buf);
-			long longRand = BitConverter.ToInt64(buf, 0);
+        public static string HexNumber(int digits)
+        {
+            byte[] buffer = new byte[digits / 2];
+            RandomHelper.Instance.NextBytes(buffer);
+            string result = string.Concat(buffer.Select(x => x.ToString("X2")).ToArray());
 
-			return (Math.Abs(longRand % ((max + 1) - min)) + min);
-		}
+            if (digits % 2 == 0)
+            {
+                return result;
+            }
 
-		#region DateTime
+            return result + RandomHelper.Instance.Next(16).ToString("X");
+        }
 
-		public static DateTime DateTime(int startYear = 1950, int startMonth = 1, int startDay = 1)
-		{
-			return DateTime(new DateTime(startYear, startMonth, startDay), System.DateTime.Now);
-		}
+        public static long Number(long min, long max)
+        {
+            byte[] buf = new byte[8];
+            RandomHelper.Instance.NextBytes(buf);
+            long longRand = BitConverter.ToInt64(buf, 0);
 
-		public static DateTime DateTime(DateTime min)
-		{
-			return DateTime(min, System.DateTime.Now);
-		}
+            return (Math.Abs(longRand % ((max + 1) - min)) + min);
+        }
 
-		/* http://stackoverflow.com/a/1483677/234132 */
-		public static DateTime DateTime(DateTime min, DateTime max)
-		{
-			TimeSpan timeSpan = max - min;
-			TimeSpan newSpan = new TimeSpan(0, RandomHelper.Instance.Next(0, (int)timeSpan.TotalMinutes), 0);
+        public static string Paragraph(int wordCount, int sentenceCount)
+        {
+            return Paragraph(wordCount, wordCount, sentenceCount, sentenceCount);
+        }
 
-			return min + newSpan;
-		}
+        public static string Paragraph(int wordCountMin, int wordCountMax, int sentenceCount)
+        {
+            return Paragraph(wordCountMin, wordCountMax, sentenceCount, sentenceCount);
+        }
 
-		#endregion
+        public static string Paragraph(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax)
+        {
+            var source = string.Join(" ", Enumerable.Range(0, RandomHelper.Instance.Next(sentenceCountMin, sentenceCountMax)).Select(x => Sentence(wordCountMin, wordCountMax)));
 
-		#region Text
+            //remove traililng space
+            return source.Trim();
+        }
 
-		public static string Email()
-		{
-			return string.Format("{0}@{1}.com", Words(1, false), Words(1, false));
-		}
+        public static IEnumerable<string> Paragraphs(int wordCount, int sentenceCount, int paragraphCount)
+        {
+            return Paragraphs(wordCount, wordCount, sentenceCount, sentenceCount, paragraphCount, paragraphCount);
+        }
 
-		public static string Words(int wordCount, bool uppercaseFirstLetter = true, bool includePunctuation = false)
-		{
-			return Words(wordCount, wordCount, uppercaseFirstLetter, includePunctuation);
-		}
+        public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCount, int paragraphCount)
+        {
+            return Paragraphs(wordCountMin, wordCountMax, sentenceCount, sentenceCount, paragraphCount, paragraphCount);
+        }
 
-		public static string Words(int wordCountMin, int wordCountMax, bool uppercaseFirstLetter = true, bool includePunctuation = false)
-		{
-			var source = string.Join(" ", Source.WordList(includePunctuation).Take(RandomHelper.Instance.Next(wordCountMin, wordCountMax)));
+        public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax, int paragraphCount)
+        {
+            return Paragraphs(wordCountMin, wordCountMax, sentenceCountMin, sentenceCountMax, paragraphCount, paragraphCount);
+        }
 
-			if (uppercaseFirstLetter)
-			{
-				source = source.UppercaseFirst();
-			}
+        public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax, int paragraphCountMin, int paragraphCountMax)
+        {
+            return Enumerable.Range(0, RandomHelper.Instance.Next(paragraphCountMin, paragraphCountMax)).Select(p => Paragraph(wordCountMin, wordCountMax, sentenceCountMin, sentenceCountMax)).ToArray();
+        }
 
-			return source;
-		}
+        public static T Random<T>(T[] items)
+        {
+            var index = RandomHelper.Instance.Next(items.Length);
 
-		public static string Sentence(int wordCount)
-		{
-			return Sentence(wordCount, wordCount);
-		}
+            return items[index];
+        }
 
-		public static string Sentence(int wordCountMin, int wordCountMax)
-		{
-			return string.Format("{0}.", Words(wordCountMin, wordCountMax, true, true)).Replace(",.", ".").Remove("..");
-		}
+        /* http://stackoverflow.com/a/6651661/234132 */
+        /* http://stackoverflow.com/a/1483677/234132 */
 
-		public static string Paragraph(int wordCount, int sentenceCount)
-		{
-			return Paragraph(wordCount, wordCount, sentenceCount, sentenceCount);
-		}
+        public static string Sentence(int wordCount)
+        {
+            return Sentence(wordCount, wordCount);
+        }
 
-		public static string Paragraph(int wordCountMin, int wordCountMax, int sentenceCount)
-		{
-			return Paragraph(wordCountMin, wordCountMax, sentenceCount, sentenceCount);
-		}
+        public static string Sentence(int wordCountMin, int wordCountMax)
+        {
+            return string.Format("{0}.", Words(wordCountMin, wordCountMax, true, true)).Replace(",.", ".").Remove("..");
+        }
 
-		public static string Paragraph(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax)
-		{
-			var source = string.Join(" ", Enumerable.Range(0, RandomHelper.Instance.Next(sentenceCountMin, sentenceCountMax)).Select(x => Sentence(wordCountMin, wordCountMax)));
+        public static string Words(int wordCount, bool uppercaseFirstLetter = true, bool includePunctuation = false)
+        {
+            return Words(wordCount, wordCount, uppercaseFirstLetter, includePunctuation);
+        }
 
-			//remove traililng space
-			return source.Trim();
-		}
+        public static string Words(int wordCountMin, int wordCountMax, bool uppercaseFirstLetter = true, bool includePunctuation = false)
+        {
+            var source = string.Join(" ", Source.WordList(includePunctuation).Take(RandomHelper.Instance.Next(wordCountMin, wordCountMax)));
 
-		public static IEnumerable<string> Paragraphs(int wordCount, int sentenceCount, int paragraphCount)
-		{
-			return Paragraphs(wordCount, wordCount, sentenceCount, sentenceCount, paragraphCount, paragraphCount);
-		}
+            if (uppercaseFirstLetter)
+            {
+                source = source.UppercaseFirst();
+            }
 
-		public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCount, int paragraphCount)
-		{
-			return Paragraphs(wordCountMin, wordCountMax, sentenceCount, sentenceCount, paragraphCount, paragraphCount);
-		}
+            return source;
+        }
 
-		public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax, int paragraphCount)
-		{
-			return Paragraphs(wordCountMin, wordCountMax, sentenceCountMin, sentenceCountMax, paragraphCount, paragraphCount);
-		}
-
-		public static IEnumerable<string> Paragraphs(int wordCountMin, int wordCountMax, int sentenceCountMin, int sentenceCountMax, int paragraphCountMin, int paragraphCountMax)
-		{
-			return Enumerable.Range(0, RandomHelper.Instance.Next(paragraphCountMin, paragraphCountMax)).Select(p => Paragraph(wordCountMin, wordCountMax, sentenceCountMin, sentenceCountMax)).ToArray();
-		}
-
-		#endregion
-
-		#region Color
-
-		/* http://stackoverflow.com/a/1054087/234132 */
-		public static string HexNumber(int digits)
-		{
-			byte[] buffer = new byte[digits / 2];
-			RandomHelper.Instance.NextBytes(buffer);
-			string result = string.Concat(buffer.Select(x => x.ToString("X2")).ToArray());
-
-			if (digits % 2 == 0)
-			{
-				return result;
-			}
-
-			return result + RandomHelper.Instance.Next(16).ToString("X");
-		}
-
-		#endregion
-	}
+        /* http://stackoverflow.com/a/1054087/234132 */
+    }
 }

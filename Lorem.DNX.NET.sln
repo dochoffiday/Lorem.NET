@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{438E4420-54B2-45AC-B8C8-010BE97875F3}"
 	ProjectSection(SolutionItems) = preProject
 		license.md = license.md
 		Lorem.NET\nuget.exe = Lorem.NET\nuget.exe
+		PatchVersion.ps1 = PatchVersion.ps1
 		readme.md = readme.md
 	EndProjectSection
 EndProject

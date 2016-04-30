@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package >
+<package>
   <metadata>
     <id>Lorem.DNX.NET.xproj</id>
     <version>0.1.0-beta</version>
@@ -11,6 +11,6 @@
     <description>A .NET library for all things random!</description>
     <releaseNotes>Initial Release.</releaseNotes>
     <copyright>Copyright 2016</copyright>
-    <tags>Lorem, Ipsem, random, dnx, rng</tags>
+    <tags></tags>
   </metadata>
 </package>
