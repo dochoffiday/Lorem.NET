@@ -1,6 +1,7 @@
 The MIT License (MIT)
 
 Copyright (c) 2015 dochoffiday, xfischer
+
 Copyright (c) 2016 Tony Richards
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
