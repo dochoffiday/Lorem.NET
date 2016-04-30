@@ -13,16 +13,10 @@ nuget:
   account_feed: true
   project_feed: true
 before_build:
-- cmd: >-
-    powershell ./PatchVersion.ps1
-    dnvm upgrade
-    dnu restore
+- cmd: prebuild.bat
 build:
   verbosity: minimal
 after_build:
-- cmd: >-
-    cd Lorem.DNX.Net
-
-    dnu pack
+- cmd: postbuild.bat
 artifacts:
 - path: '**\*.nupkg'

@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		license.md = license.md
 		Lorem.NET\nuget.exe = Lorem.NET\nuget.exe
 		PatchVersion.ps1 = PatchVersion.ps1
+		postbuild.bat = postbuild.bat
+		prebuild.bat = prebuild.bat
 		readme.md = readme.md
 	EndProjectSection
 EndProject
