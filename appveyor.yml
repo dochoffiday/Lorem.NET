@@ -1,6 +1,5 @@
 version: 0.1.{build}
 configuration:
-- Debug
 - Release
 assembly_info:
   patch: true
@@ -19,3 +18,22 @@ after_build:
 - ps: .\postbuild.ps1
 artifacts:
 - path: '**\*.nupkg'
+deploy:
+  provider: NuGet
+  on:
+    branch: master
+  api_key:
+    secure: 5mSnG9xdZ10yKDFhtI0w8p6aaj0m5ULQvVwlSGuzR2/D6LjQftisSQo3J6DYvZfw
+  skip_symbols: false
+  artifact: /.*\.nupkg/
+deploy:
+  release: Lorem-DNX-NET-v$(appveyor_build_version)
+  description: v$(appveyor_repo_commit_message)
+  provider: GitHub
+  auth_token:
+    secure: jtEqWpP0mI7h+Bapo8DhdJDSQxUV60pDwfQqLdFZqpHV4LqcCEmrcTmNMf6pu9bl
+  artifact: /.*\.nupkg/
+  draft: false
+  prerelease: false
+  on:
+    branch: master
