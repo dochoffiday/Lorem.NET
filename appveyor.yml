@@ -1,4 +1,4 @@
-version: 0.1.{build}
+version: 0.2.{build}
 skip_tags: true
 configuration:
 - Release
@@ -29,7 +29,7 @@ deploy:
   artifact: /.*\.nupkg/
 - provider: GitHub
   release: Lorem-DNX-NET-v$(appveyor_build_version)
-  description: v$(appveyor_repo_commit_message)
+  description: $(appveyor_repo_commit_message)
   auth_token:
     secure: jtEqWpP0mI7h+Bapo8DhdJDSQxUV60pDwfQqLdFZqpHV4LqcCEmrcTmNMf6pu9bl
   artifact: /.*\.nupkg/

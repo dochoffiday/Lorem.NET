@@ -106,6 +106,16 @@ namespace LoremNET
         }
 
         /// <summary>
+        /// Creates a random lowercase letter.
+        /// </summary>
+        /// <returns>A random character between 'a' and 'z' (inclusive)</returns>
+        public static char Letter()
+        {
+            var charNumber = RandomHelper.Instance.Next(0, 26);
+            return (char)('a' + charNumber);
+        }
+
+        /// <summary>
         /// Creates a random number between min and max
         /// </summary>
         /// <param name="min">The minimum number.</param>

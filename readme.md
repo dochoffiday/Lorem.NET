@@ -66,20 +66,3 @@ Lorem.NET includes a thread-safe System.Random instance.
 ```csharp
 int i = LoremNET.RandomHelper.Instance.Next(1, 2);
 ```
-
-### Extending the Class
-
-If you want to extend the class to add more methods, go right ahead!
-
-```csharp
-namespace LoremNET
-{
-    public partial class Lorem
-    {
-        public static string Email(string domain)
-        {
-            return Email().Replace(".com", string.Format(".{0}", domain));
-        }
-    }
-}
-```
