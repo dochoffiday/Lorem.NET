@@ -3,6 +3,8 @@ Lorem.NET for .DNX
 
 A .NET library for all things random!  Updated to support DNX projects.
 
+[![Build status](https://ci.appveyor.com/api/projects/status/81i490v2mfq1h0gw?svg=true)](https://ci.appveyor.com/project/trichards57/lorem-dnx-net)
+
 Usage
 ---------------
 
