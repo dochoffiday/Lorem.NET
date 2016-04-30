@@ -1,0 +1,28 @@
+version: 0.1.{build}
+configuration:
+- Debug
+- Release
+platform: Any CPU
+assembly_info:
+  patch: true
+  file: '**\AssemblyInfo.*'
+  assembly_version: '{version}'
+  assembly_file_version: '{version}'
+  assembly_informational_version: '{version}'
+nuget:
+  account_feed: true
+  project_feed: true
+before_build:
+- cmd: >-
+    powershell ./PatchVersion.ps1
+    dnvm upgrade
+    dnu restore
+build:
+  verbosity: minimal
+after_build:
+- cmd: >-
+    cd Lorem.DNX.Net
+
+    dnu pack
+artifacts:
+- path: '**\*.nupkg'

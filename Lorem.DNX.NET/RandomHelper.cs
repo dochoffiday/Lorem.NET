@@ -3,16 +3,28 @@ using System.Threading;
 
 namespace LoremNET
 {
-    /*
-     * http://stackoverflow.com/a/1785821/234132
-     */
+    /// <summary>
+    /// A thread-safe helper class to get an instance of Random.
+    /// </summary>
+    /// <remarks>
+    /// From http://stackoverflow.com/a/1785821/234132
+    /// </remarks>
     public static class RandomHelper
     {
-        private static int _seedCounter = new Random().Next();
-
         [ThreadStatic]
         private static Random _rng;
 
+        /// <summary>
+        /// The seed used for each instance of Random
+        /// </summary>
+        private static int _seedCounter = new Random().Next();
+
+        /// <summary>
+        /// Gets thread-local instance of Random.
+        /// </summary>
+        /// <value>
+        /// An instance of Random, lazily implemented.
+        /// </value>
         public static Random Instance
         {
             get
