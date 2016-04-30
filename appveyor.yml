@@ -2,7 +2,6 @@ version: 0.1.{build}
 configuration:
 - Debug
 - Release
-platform: Any CPU
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'

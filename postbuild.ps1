@@ -1,3 +1,3 @@
 cd Lorem.DNX.Net
 
-dnu pack
+dnu pack --configuration $Env:CONFIGURATION 
