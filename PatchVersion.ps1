@@ -1,1 +1,0 @@
-(Get-Content $PSScriptRoot\Lorem.DNX.NET\project.ci.json).replace('$version$', $Env:APPVEYOR_BUILD_VERSION) | Set-Content $PSScriptRoot\Lorem.DNX.NET\project.json
