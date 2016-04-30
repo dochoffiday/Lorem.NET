@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Lorem.DNX.NET.xproj</id>
+    <version>0.1.0-beta</version>
+    <authors>Tony Richards (trichards57), dochoffiday, xfischer</authors>
+    <owners>Tony Richards</owners>
+    <licenseUrl>https://github.com/trichards57/Lorem.DNX.NET/blob/master/license.md</licenseUrl>
+    <projectUrl>https://github.com/trichards57/Lorem.DNX.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET library for all things random!</description>
+    <releaseNotes>Initial Release.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags>Lorem, Ipsem, random, dnx, rng</tags>
+  </metadata>
+</package>

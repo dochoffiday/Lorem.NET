@@ -1,10 +1,10 @@
 ﻿{
-  "version": "1.0.0-beta",
+  "version": "0.1.0-beta",
   "description": "A .NET library for all things random!",
   "authors": [ "dochoffiday", "trichards57", "xfischer" ],
   "tags": [ "" ],
   "projectUrl": "https://github.com/trichards57/Lorem.DNX.NET",
-  "licenseUrl": "https://opensource.org/licenses/MIT",
+  "licenseUrl": "https://github.com/trichards57/Lorem.DNX.NET/blob/master/license.md",
 
   "frameworks": {
     "net451": { },
