@@ -13,10 +13,10 @@ nuget:
   account_feed: true
   project_feed: true
 before_build:
-- pd: prebuild.ps1
+- ps: .\prebuild.ps1
 build:
   verbosity: minimal
 after_build:
-- ps: postbuild.ps1
+- ps: .\postbuild.ps1
 artifacts:
 - path: '**\*.nupkg'
