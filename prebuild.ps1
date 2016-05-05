@@ -6,3 +6,4 @@ Write-Host "Updated project.json to use version $($Env:APPVEYOR_BUILD_VERSION)"
 dnvm upgrade
 
 dnu restore
+nuget restore
