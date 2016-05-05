@@ -1,6 +1,6 @@
 ﻿{
   "version": "$version$",
-  "description": "A .NET library for all things random!",
+  "description": "A .NET library for all things random!  Intended for Windows 10 Universal Projects.",
   "authors": [ "dochoffiday", "Tony Richards (trichards57)", "xfischer" ],
   "tags": [ "Lorem", "Ipsem", "random", "UWP", "rng" ],
   "projectUrl": "https://github.com/trichards57/Lorem.DNX.NET",
