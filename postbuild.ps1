@@ -4,4 +4,4 @@ dnu pack --configuration $Env:CONFIGURATION
 
 cd ..\Lorem.Universal.Net
 
-dnu pack --configuration $Env:CONFIGURATION 
+nuget pack Lorem.Universal.Net.csproj -Prop Configuration=$Env:CONFIGURATION 
