@@ -13,7 +13,7 @@ namespace LoremNET
         /// <summary>
         /// Returns true <paramref name="successes"/> times out of <paramref name="attempts"/>.
         /// </summary>
-        /// <param name="successes">The number of successes per <paramref="attempts"/>.</param>
+        /// <param name="successes">The number of successes per <paramref name="attempts"/>.</param>
         /// <param name="attempts">The attempts.</param>
         /// <returns><c>true</c> on success, otherwise <c>false</c></returns>
         public static bool Chance(int successes, int attempts)
@@ -66,7 +66,7 @@ namespace LoremNET
         /// <returns>A random email address</returns>
         public static string Email()
         {
-            return string.Format("{0}@{1}.com", Words(1, false), Words(1, false));
+            return $"{Words(1, false)}@{Words(1, false)}.com";
         }
 
         /// <summary>
@@ -255,7 +255,7 @@ namespace LoremNET
         /// <returns>A string containing the generated words</returns>
         public static string Sentence(int wordCountMin, int wordCountMax)
         {
-            return string.Format("{0}.", Words(wordCountMin, wordCountMax, true, true)).Replace(",.", ".").Remove("..");
+            return $"{Words(wordCountMin, wordCountMax, true, true)}.".Replace(",.", ".").Remove("..");
         }
 
         /// <summary>
