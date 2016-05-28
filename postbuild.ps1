@@ -1,6 +1,6 @@
 cd Lorem.DNX.Net
 
-dnu pack --configuration $Env:CONFIGURATION 
+dotnet pack --configuration $Env:CONFIGURATION 
 
 cd ..\Lorem.Universal.Net
 
