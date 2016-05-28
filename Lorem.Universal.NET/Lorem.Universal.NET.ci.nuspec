@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Lorem.Universal.NET</id>
+    <version>$version$</version>
+    <title>Lorem.Universal.NET</title>
+    <authors>dochoffiday, Tony Richards (trichards57), xfischer</authors>
+    <owners>dochoffiday, Tony Richards (trichards57), xfischer</owners>
+    <licenseUrl>https://github.com/trichards57/Lorem.DNX.NET/blob/master/license.md</licenseUrl>
+    <projectUrl>https://github.com/trichards57/Lorem.DNX.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET library for all things random!  Intended for Windows 10 Universal Projects.</description>
+    <tags>Lorem Ipsem random UWP rng</tags>
+  </metadata>
+</package>
