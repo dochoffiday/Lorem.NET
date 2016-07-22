@@ -3,8 +3,12 @@ Lorem.NET for .DNX
 
 A .NET library for all things random!  Updated to support DNX projects.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/81i490v2mfq1h0gw?svg=true)](https://ci.appveyor.com/project/trichards57/lorem-dnx-net)
-[![NuGet](https://img.shields.io/nuget/v/Lorem.DNX.NET.svg?maxAge=2592000)](https://www.nuget.org/packages/Lorem.DNX.NET/)
+[![Build status](https://ci.appveyor.com/api/projects/status/81i490v2mfq1h0gw/branch/master?svg=true)](https://ci.appveyor.com/project/trichards57/lorem-dnx-net/branch/master) 
+[![Documentation Status](http://readthedocs.org/projects/loremdnxnet/badge/?version=docs)](http://loremdnxnet.readthedocs.io/en/docs/?badge=docs)
+
+ASP .Net Core [![NuGet](https://img.shields.io/nuget/v/Lorem.DNX.NET.svg?maxAge=2592000)](https://www.nuget.org/packages/Lorem.DNX.NET/)
+
+Windows Universal App [![NuGet](https://img.shields.io/nuget/v/Lorem.Universal.NET.svg?maxAge=2592000)](https://www.nuget.org/packages/Lorem.Universal.NET/)
 
 
 Usage
