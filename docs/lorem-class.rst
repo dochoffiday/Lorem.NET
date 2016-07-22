@@ -78,3 +78,28 @@ Enum<TEnum>()
 Returns a random item from *TEnum*.  Throws an *ArgumentException* if *TEnum* is
 not an enum.
 
+HexNumber(int digits)
+~~~~~~~~~~~~~~~~~~~~~
+
+Returns a string of hexidecimal digits, *digits* characters long.
+
+digits
+  The number of digits to return
+
+Letter()
+~~~~~~~~
+
+Returns a random lowercase character between 'a' and 'z' (inclusive).
+
+Number(long min, long max)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Returns a random long integer between *min* and *max*.
+
+min
+  The minimum number to return
+max
+  The maximum number to return
+
+The code was originally taken from http://stackoverflow.com/a/6651661/234132
+
