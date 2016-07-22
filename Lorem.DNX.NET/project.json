@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "A .NET library for all things random!  Intended for ASP .Net Core projects.",
   "authors": [ "dochoffiday", "Tony Richards (trichards57)", "xfischer" ],
   "packOptions": {
