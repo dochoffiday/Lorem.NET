@@ -213,3 +213,7 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+/Lorem.NET/project.lock.json
+/Lorem.DNX.NET/project.lock.json
+/.vs
+/docs/_build

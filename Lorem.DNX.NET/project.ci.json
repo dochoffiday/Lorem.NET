@@ -1,0 +1,21 @@
+﻿{
+  "version": "$version$",
+  "description": "A .NET library for all things random!  Intended for ASP .Net Core projects.",
+  "authors": [ "dochoffiday", "Tony Richards (trichards57)", "xfischer" ],
+  "packOptions": {
+    "tags": [ "Lorem", "Ipsem", "random", "dnx", "rng" ],
+    "projectUrl": "https://github.com/trichards57/Lorem.DNX.NET",
+    "licenseUrl": "https://github.com/trichards57/Lorem.DNX.NET/blob/master/license.md"
+  },
+  "frameworks": {
+    "netstandard1.5": {
+    }
+  },
+  "dependencies": {
+    "System.Linq": "4.1.0",
+    "System.Runtime": "4.1.0",
+    "System.Runtime.Extensions": "4.1.0",
+    "System.Runtime.InteropServices": "4.1.0",
+    "System.Threading": "4.0.11"
+  }
+}
