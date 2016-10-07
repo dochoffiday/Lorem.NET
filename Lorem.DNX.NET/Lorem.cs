@@ -77,11 +77,19 @@ namespace LoremNET
         /// <exception cref="ArgumentException">Generic type must be an enum.</exception>
         public static TEnum Enum<TEnum>() where TEnum : struct, IConvertible
         {
+#if PCL
+            if (typeof(TEnum).IsEnum)
+            {
+                var v = System.Enum.GetValues(typeof(TEnum));
+                return (TEnum)v.GetValue(RandomHelper.Instance.Next(v.Length));
+            }
+#else
             if (typeof(TEnum).GetTypeInfo().IsEnum)
             {
                 var v = System.Enum.GetValues(typeof(TEnum));
                 return (TEnum)v.GetValue(RandomHelper.Instance.Next(v.Length));
             }
+#endif
             throw new ArgumentException("Generic type must be an enum.");
         }
 
