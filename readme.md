@@ -55,7 +55,7 @@ MyEnum value = LoremNET.Generate.Enum<MyEnum>();
 
 ```
 
-### Updateing the Source
+### Updating the Source
 
 If you want to change the underlying source text, go right ahead!
 
