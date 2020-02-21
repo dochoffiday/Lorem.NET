@@ -17,7 +17,7 @@ namespace LoremNET
             return includePuncation ? Rearrange(Text) : Rearrange(Text.Remove(","));
         }
 
-        public static void UpdateSource(string text)
+        public static void Update(string text)
         {
             Text = text;
         }
