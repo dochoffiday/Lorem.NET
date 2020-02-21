@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lorem.NET", "Lorem.NET\Lorem.NET.csproj", "{787D3BA7-DB6C-4704-B89C-8D91A4392442}"
 EndProject
@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples\Examples.csproj", "{3A28CF73-F2F5-467B-A7B6-E822A6653203}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,8 +22,15 @@ Global
 		{787D3BA7-DB6C-4704-B89C-8D91A4392442}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{787D3BA7-DB6C-4704-B89C-8D91A4392442}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{787D3BA7-DB6C-4704-B89C-8D91A4392442}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A28CF73-F2F5-467B-A7B6-E822A6653203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A28CF73-F2F5-467B-A7B6-E822A6653203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A28CF73-F2F5-467B-A7B6-E822A6653203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A28CF73-F2F5-467B-A7B6-E822A6653203}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5496E627-F3B6-4620-865C-774C5E0B11E0}
 	EndGlobalSection
 EndGlobal
