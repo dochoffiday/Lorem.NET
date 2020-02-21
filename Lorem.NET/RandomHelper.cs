@@ -6,14 +6,14 @@ namespace LoremNET
     /*
      * http://stackoverflow.com/a/1785821/234132
      */
-    public static class RandomHelper
+    internal static class RandomHelper
     {
         private static int seedCounter = new Random().Next();
 
         [ThreadStatic]
         private static Random rng;
 
-        public static Random Instance
+        internal static Random Instance
         {
             get
             {

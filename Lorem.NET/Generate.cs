@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace LoremNET
 {
-    public partial class Lorem
+    public static class Generate
     {
         public static bool Chance(int successes, int attempts)
         {
@@ -70,7 +70,7 @@ namespace LoremNET
 
         public static string Email()
         {
-            return string.Format("{0}@{1}.com", Lorem.Words(1, false), Lorem.Words(1, false));
+            return string.Format("{0}@{1}.com", Generate.Words(1, false), Generate.Words(1, false));
         }
 
         public static string Words(int wordCount, bool uppercaseFirstLetter = true, bool includePunctuation = false)
