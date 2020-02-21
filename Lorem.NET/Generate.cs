@@ -25,7 +25,7 @@ namespace LoremNET
             if (typeof(TEnum).IsEnum)
             {
                 var v = System.Enum.GetValues(typeof(TEnum));
-                return (TEnum)v.GetValue(LoremNET.RandomHelper.Instance.Next(v.Length));
+                return (TEnum)v.GetValue(RandomHelper.Instance.Next(v.Length));
             }
             else
             {
